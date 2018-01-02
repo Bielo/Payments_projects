@@ -3,21 +3,17 @@ package pl.sdacademy;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
-
-
-/**
- * Klasa przechowuje informacje o liczbie godzin przepracowanych danego dnia
- */
 
 @Data
 @AllArgsConstructor
-public class WorkingDay {
-
+public class Invoice {
     private LocalDate date;
-    private int hours;
+    private BigDecimal value;
 
     public boolean betweenDays(LocalDate firstDay, LocalDate lastDay) {
         return firstDay.compareTo(date) <= 0 && date.compareTo(lastDay) <= 0;
     }
+
 }

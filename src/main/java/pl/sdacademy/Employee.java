@@ -17,4 +17,6 @@ public abstract class Employee {
     public abstract boolean isPaymentDay(LocalDate day);
 
     public abstract BigDecimal calculatePayment(LocalDate day);
+
+    public abstract LocalDate findFirstDayOfWorkingPeroid (LocalDate paymentDate);
 }
